@@ -37,7 +37,7 @@ To run Musync locally, follow these steps:
    ```
 
 4. Create a Spotify developer account and change the `CLIENT_ID` and `CLIENT_SECRET` to its respective values.
-   
+
 6. Run the command:
    ```bash
    python main.py
@@ -45,3 +45,26 @@ To run Musync locally, follow these steps:
 
 ## Visuals of Musync
 
+- Landing Page
+  
+  <img width="1440" alt="Screenshot 2024-03-18 at 5 27 25 PM" src="https://github.com/ishmamk1/musync/assets/117555551/cfde6447-f67e-4dc6-8fc0-34a4f54cf931">
+
+- Home Page Once User is Authenticated
+
+<img width="1440" alt="Screenshot 2024-03-18 at 5 27 36 PM" src="https://github.com/ishmamk1/musync/assets/117555551/cccd5356-824f-4fb9-92eb-feb3994a1c12">
+
+-Recently Played Tracks
+
+<img width="1440" alt="Screenshot 2024-03-18 at 5 27 42 PM" src="https://github.com/ishmamk1/musync/assets/117555551/11bca7d1-6f6d-42c7-be67-4dca0c5b75d0">
+
+-Recieve Recommendations & Create Playlist Page
+
+<img width="1440" alt="Screenshot 2024-03-18 at 5 28 34 PM" src="https://github.com/ishmamk1/musync/assets/117555551/b88b6531-c14f-4a82-99a9-7eccd015cac3">
+
+-Confirmation Of Working Product
+
+<img width="1432" alt="Screenshot 2024-03-18 at 5 29 31 PM" src="https://github.com/ishmamk1/musync/assets/117555551/e33ffaf1-72a7-4469-aef3-f969ba733dab">
+
+
+
+  
