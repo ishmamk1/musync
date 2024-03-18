@@ -1,0 +1,27 @@
+{% extends 'loggedin_base.html' %}
+
+
+{% block content %}
+    <main>
+        <br><br>
+        <div class="container mx-auto py-12">
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <h1 class="text-3xl font-semibold mb-4">Recent Tracks</h1>
+                <hr class="my-8">
+                    {% for track in recent_track_info %}
+                        <div class="bg-gray-100 rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-105">
+                            <div class="grid grid-cols-5 gap-20">
+                                <a href="{{ track.url }}" target="_blank"><img src="{{ track.image }}" alt="Album Artwork"></a>
+                                <div class="details text-center">
+                                    <h2>{{ track.title }}</h2>
+                                    <p>Artist: {{ track.artist }}</p>
+                                    <p>Album: {{ track.album }}</p>
+                                    <hr class="black my-8">
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+            </div>
+        </div>
+    </main>
+{% endblock %}

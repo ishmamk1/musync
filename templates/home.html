@@ -1,0 +1,76 @@
+{% extends 'loggedin_base.html' %}
+
+{% block title %}Home - Syncify{% endblock %}
+
+{% block content %}>
+<main>
+    <br><br>
+    <div class="container mx-auto py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-bold mb-4">Welcome, {{ username }}</h1>
+            <div class="flex items-center mb-8">
+                <img src="{{ user_profile_pic }}" alt="Profile" class="w-16 h-16 rounded-full mr-4">
+                <p class="text-lg font-semibold">{{ username }}</p>
+            </div>
+
+            <hr class="my-8">
+
+            <div class="bg-gray-200 rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-105">
+                <h2 class="text-2xl font-semibold mb-4">Top Artists</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    {% for artist, img_url in artist_data %}
+                        <div class="flex flex-col items-center transition-transform duration-300 hover:scale-105">
+                            <img src="{{ img_url }}" alt="Profile" class="w-32 h-32 mb-2">
+                            <p class="text-lg">{{ artist }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <hr class="my-8">
+
+
+            <div class="bg-gray-200 rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-105">
+                <h2 class="text-2xl font-semibold mb-4">Currently Playing</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    {% if track_info %}
+                        <div class="flex flex-col items-center col-span-5">
+                            <!-- Track information -->
+                            <div class="text-center mt-4">
+                                <a href="{{ track_info[3] }}"><img src="{{ track_info[4] }}" class="w-64 h-64 mb-2"></a>
+                                <h1 class="text-lg font-semibold">{{ track_info[0] }}</h1>
+                                <h1 class="text-lg">{{ track_info[1] }}</h1>
+                                <h1 class="text-lg">{{ track_info[2] }}</h1>
+                            </div>
+                        </div>
+                    {% else %}
+                        <p class="col-span-5 text-center">No track currently playing</p>
+                    {% endif %}
+                </div>
+            </div>
+
+            <hr class="my-8">
+
+            <div class="bg-gray-200 rounded-lg shadow-lg p-8 transition-transform duration-300 hover:scale-105">
+                <h2 class="text-2xl font-semibold mb-4">Top Tracks</h2>
+                <div class="grid grid-cols-5 gap-4">
+                    {% for title, img_url, artist in top_track_data %}
+                        <div class="flex flex-col items-center transition-transform duration-300 hover:scale-105">
+                            <img src="{{ img_url }}" alt="Profile" class="w-32 h-32 mb-2">
+                            <p class="text-lg text-center">{{ title }}</p>
+                            <p class="text-medium text-center">{{ artist }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <hr class="my-8">
+
+
+
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+

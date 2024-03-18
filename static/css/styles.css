@@ -1,0 +1,10 @@
+/* Add this CSS to your stylesheet */
+
+.button-animation {
+    transition: transform 0.3s ease-in-out; /* Smooth transition for the transform property */
+}
+
+.button-animation:hover {
+    transform: scale(1.05); /* Scale the button slightly when hovered */
+}
+

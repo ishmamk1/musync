@@ -1,0 +1,20 @@
+{% extends 'loggedin_base.html' %}
+
+{% block content %}
+<body class="bg-gray-100">
+<br><br>
+    <div class="container mx-auto py-12">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-3xl font-bold mb-4">About Musync</h1>
+            <p class="mb-4">Musync is a project created to help users discover new music that closely resembles the artists they like. It utilizes the Spotify API to analyze the user's listening habits and preferences, and then generates personalized recommendations based on that data.</p>
+            <p class="mb-4">This project was built using Flask for the backend, Tailwind CSS for styling, and HTML for the frontend. By leveraging the power of these technologies, Musync provides a seamless and intuitive user experience for discovering and enjoying music.</p>
+            <h2 class="text-xl font-semibold mb-2">How Musync Works</h2>
+            <p class="mb-4">1. Users authenticate with their Spotify account to grant access to their listening history and preferences.</p>
+            <p class="mb-4">2. Musync analyzes the user's top artists, tracks, and listening patterns to understand their musical tastes.</p>
+            <p class="mb-4">3. Based on this analysis, Musync generates personalized recommendations for new artists and tracks that closely match the user's preferences.</p>
+            <p class="mb-4">4. Users can explore these recommendations, listen to previews, and add them to their Spotify playlists directly from the Musync interface.</p>
+            <p class="mb-4">With Musync, users no longer have to struggle to find good music that resonates with their tastes. Whether you're looking for new artists to explore or just want to discover fresh tracks, Musync has got you covered!</p>
+        </div>
+    </div>
+</body>
+{% endblock %}
